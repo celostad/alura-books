@@ -1,12 +1,11 @@
 const fs = require("fs")
-//const fs = import('fs');
 const arquivoLivros = "livros.json"
 const arquivoFavoritos = "favoritos.json"
 
 function getTodosFavoritos() {
     return JSON.parse(fs.readFileSync(arquivoFavoritos))
 }
-/*
+
 function insereFavorito(id) {
 
     const livros = JSON.parse(fs.readFileSync(arquivoLivros))
@@ -23,9 +22,9 @@ function deletaFavoritoPorId(id) {
     const favoritosFiltrados = favoritos.filter(favorito => favorito.id !== id)
     fs.writeFileSync(arquivoFavoritos, JSON.stringify( favoritosFiltrados ))
 }
-*/
+
 module.exports = {
     getTodosFavoritos,
-    //insereFavorito,
-    //deletaFavoritoPorId
+    insereFavorito,
+    deletaFavoritoPorId
 }

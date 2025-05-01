@@ -7,7 +7,7 @@ async function getFavoritos() {
     return response.data
 }
 
-async function postFavoritos(id) {
+async function postFavorito(id) {
     await favoritosAPI.post(`/${id}`)
 }
 
@@ -17,6 +17,6 @@ async function deleteFavoritos(id) {
 
 export {
     getFavoritos,
-    postFavoritos,
+    postFavorito,
     deleteFavoritos
 }
